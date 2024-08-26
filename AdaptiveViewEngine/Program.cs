@@ -1,9 +1,18 @@
+using AdaptiveViewEngine.Helper;
+using AdaptiveViewEngine.Middleware;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddRazorOptions(options =>
+    {
+        options.ViewLocationExpanders.Add(new DomainViewLocationExpander());
+    });
 
 var app = builder.Build();
+app.UseMiddleware<DomainMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
