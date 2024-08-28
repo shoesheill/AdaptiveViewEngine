@@ -1,7 +1,6 @@
 using AdaptiveViewEngine.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.Extensions.Localization;
 
 namespace AdaptiveViewEngine.Controllers
