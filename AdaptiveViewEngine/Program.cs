@@ -23,7 +23,7 @@ builder.Services.AddLocalization(options =>
 // Configure localization options
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
-    var supportedCultures = new[] { "en-US", "fr-FR" };
+    var supportedCultures = new[] { "en-US", "fr-FR","ne-NP" };
     options.DefaultRequestCulture = new RequestCulture("en-US");
     options.SupportedCultures = supportedCultures.Select(c => new CultureInfo(c)).ToList();
     options.SupportedUICultures = supportedCultures.Select(c => new CultureInfo(c)).ToList();
